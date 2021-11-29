@@ -5,9 +5,7 @@ const player = new Player('vimeo-player', {
     width: 640
 })
 
-player.on('play', function() {
-    console.log('played the video!');
-});
+document.addEventListener('DOMContentLoaded',  setPrevTime())
 
 player.on('timeupdate', throttle(() => {
     player.getCurrentTime().then(res => localStorage.setItem("videoplayer-current-time", res))
@@ -15,7 +13,10 @@ player.on('timeupdate', throttle(() => {
 
 function setPrevTime() {
     let savedTime = localStorage.getItem("videoplayer-current-time")
+    if (!savedTime) {
+        return
+    }
+
     player.setCurrentTime(savedTime)
 }
 
-document.addEventListener('DOMContentLoaded',  setPrevTime())
