@@ -16,4 +16,4 @@ var n,t=arguments[3],r=require("buffer").Buffer;(function(){var r,e=200,u="Unsup
 },{"buffer":"dskh"}],"TTyb":[function(require,module,exports) {
 "use strict";var e=require("lodash");const t={form:document.querySelector(".feedback-form"),textarea:document.querySelector(".feedback-form textarea"),emailField:document.querySelector(".feedback-form input")};function a(e){let a={email:t.form.email.value,message:t.form.message.value};localStorage.setItem("feedback-form-state",JSON.stringify(a))}function o(e){e.preventDefault();let a=localStorage.getItem("feedback-form-state"),o=JSON.parse(a);console.log(o),t.form.reset(),localStorage.removeItem("feedback-form-state")}function r(){let e=localStorage.getItem("feedback-form-state"),a=JSON.parse(e);null!==a&&(t.emailField.value=a.email,t.textarea.value=a.message)}document.addEventListener("DOMContentLoaded",r),t.form.addEventListener("input",(0,e.throttle)(a,500)),t.form.addEventListener("submit",o);
 },{"lodash":"B1iE"}]},{},["TTyb"], null)
-//# sourceMappingURL=/goit-js-hw-08/03-feedback.326259fb.js.map
+//# sourceMappingURL=/goit-js-hw-08/03-feedback.ca475785.js.map
