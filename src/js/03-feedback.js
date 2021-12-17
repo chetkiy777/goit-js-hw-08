@@ -11,9 +11,9 @@ refs.form.addEventListener('input', throttle(onFormInput, 500) )
 refs.form.addEventListener('submit', onFormSubmit)
 
 function onFormInput(e) {
-     let state = {
-        email: refs.form['email'].value,
-        message: refs.form['message'].value
+    let state = {
+    email: refs.form['email'].value,
+    message: refs.form['message'].value
     }
 
    localStorage.setItem("feedback-form-state", JSON.stringify(state))
