@@ -21,7 +21,7 @@ const galleryList = document.querySelector('.gallery')
     let cardSet = addGallery(galleryItems)
     galleryList.insertAdjacentHTML('afterbegin',cardSet )
     
-    var lightbox = new SimpleLightbox('.gallery a', {
+    let lightbox = new SimpleLightbox('.gallery a', {
     
     overlay: true,
     captionDelay: '250ms'
